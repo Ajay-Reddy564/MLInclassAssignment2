@@ -1,38 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[24]:
-
-
-import numpy as np
-
-#creating a random vector of size 15 with integers in the range 1-20 as given in the question
-x = np.random.randint(1,20,15)
-print("Original array:")
-print(x)
-
-#Here we are Reshaping the array using a method called reshape
-y = x.reshape(3, 5)
-print("Reshaped array:")
-print(y)
-
-#printing the Shape of an array
-print('Shape of the array:',y.shape)
-
-#replacing the max in each row with 0
-for i in y:
-    i[i == max(i)] = 0
-    
-print("Replacing the max in each row with Zero")
-print(y)
-   
-   
-   
-
-       
-   
-
-
 # In[2]:
 
 
@@ -149,25 +114,9 @@ data.dtypes
 data.plot.scatter(x='Duration',y='Calories',c='DarkBlue')
 
 
-# In[23]:
 
 
-import matplotlib.pyplot as plt
-# Given Data to plot
-languages = 'Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++'
-popuratity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
-colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
-# Here i am exploding 1st slice
-explode = (0.1, 0, 0, 0,0,0)  
-# Final Plot
-plt.pie(popuratity, explode=explode, labels=languages, colors=colors,
-autopct='%1.1f%%', shadow=True, startangle=140)
 
-plt.axis('equal')
-plt.show()
-
-
-# In[ ]:
 
 
 
